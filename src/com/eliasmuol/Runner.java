@@ -37,7 +37,8 @@ public class Runner {
                 case UNKNOWN:
                     break;
                 case QUIT:
-                    end = true;
+                    end=true;
+                    break;
             }
         }
 

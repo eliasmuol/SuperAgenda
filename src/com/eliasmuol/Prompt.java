@@ -5,13 +5,13 @@ import java.util.Scanner;
 public class Prompt {
 
     public static void init() {
-        System.out.println("Esta es tu agenda personalizada.");
+        System.out.println("This is your personalized diary.");
     }
 
     // this text show ever you need.
     public static void print(int contactNumber) {
-        System.out.println("[" + contactNumber + "] contactos");
-        System.out.println("Hola digame que necesita:");
+        System.out.println("[" + contactNumber + "] contacts");
+        System.out.println("Hello, tell me what do you need:");
         printHelp();
     }
 
