@@ -25,7 +25,7 @@ public class FileManager {
             bufferedWriter.write(contact.getName() + "-" + contact.getPhone() + "\n");
             bufferedWriter.close();
         } catch (IOException e) {
-            System.err.println("Ha habido un problema accediendo al archivo agenda");
+            System.err.println("There is a problem loading the diary File");
         }
     }
 
@@ -52,6 +52,7 @@ public class FileManager {
             bufferedWriter.close();
             // Sobreescribimos el fichero omitiendo la linea que queríamos
             // borrar
+            inputFile.delete();
             tempFile.renameTo(inputFile);
 
         } catch (
@@ -72,13 +73,13 @@ public class FileManager {
             String line;
 
             while ((line = bufferedReader.readLine()) != null) {
-                String[] namePhonePair = line.split("-");
+                String[] namePhonePair = line.split(" - ");
                 contactList.add(new Contact(namePhonePair[0], namePhonePair[1]));
             }
             bufferedReader.close();
 
         } catch (IOException e) {
-            System.err.println("Ha habido un problema accediendo al archivo agenda");
+            System.err.println("There is a problem loading the diary File");
         }
 
         return contactList;

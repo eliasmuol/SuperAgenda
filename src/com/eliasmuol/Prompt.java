@@ -12,7 +12,7 @@ public class Prompt {
     public static void print(int contactNumber) {
         System.out.println("[" + contactNumber + "] contacts");
         System.out.println("Hello, tell me what do you need:");
-        printHelp();
+        //printHelp();
     }
 
     public static String scan() {
@@ -26,5 +26,6 @@ public class Prompt {
         System.out.println("(l)ook: List contacts");
         System.out.println("(d)elete: Delete contact");
         System.out.println("(h)elp: help");
+        System.out.println("(q)uit: quit");
     }
 }
