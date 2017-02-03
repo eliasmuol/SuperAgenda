@@ -15,13 +15,15 @@ public class Runner {
     public void start() {
 
         boolean end = false;
+        //Iniciamos el prompt
         Prompt.init();
 
         while (!end) {
             Prompt.print(agenda.getContactNumber());
 
+            //escaneaaaarr
             switch (CommandParser.parse(Prompt.scan())) {
-
+//aqui casea segun lo que quiera hacer el user. Va a FileManager
                 case ADD:
                     agenda.addContact();
                     break;

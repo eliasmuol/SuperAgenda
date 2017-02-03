@@ -73,7 +73,7 @@ public class FileManager {
             String line;
 
             while ((line = bufferedReader.readLine()) != null) {
-                String[] namePhonePair = line.split(" - ");
+                String[] namePhonePair = line.split("-");
                 contactList.add(new Contact(namePhonePair[0], namePhonePair[1]));
             }
             bufferedReader.close();
